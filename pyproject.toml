@@ -16,6 +16,7 @@ lxml = "^4.9.2"
 cairosvg = "^2.6.0"
 streamlit = "^1.18.1"
 tqdm = "^4.64.1"
+elementpath = "^4.0.1"
 
 
 [build-system]

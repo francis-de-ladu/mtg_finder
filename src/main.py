@@ -1,8 +1,10 @@
-import scrython as scry
-import pandas as pd
+import asyncio
 import time
-from tqdm import tqdm
+
+import pandas as pd
+import scrython as scry
 import streamlit as st
+from tqdm import tqdm
 
 
 def is_public_prop(prop):
@@ -43,29 +45,31 @@ def to_html(cards):
 
 
 def main():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     candidates = pd.read_csv("data/perrie/cards.csv")
 
-    # cards = []
-    # for name in tqdm(candidates.card_name.tolist()[:5]):
-    #     # print(f"\n{name}:\n")
-    #     card = to_card_properties(scry.cards.Named(exact=name))
-    #     # for prop in filter(is_public_prop, dir(card)):
-    #     #     try:
-    #     #         print(f"{prop}: {getattr(card, prop)()}")
-    #     #     except:
-    #     #         continue
-    #     # print(card)
-    #     cards.append(card)
-    #     time.sleep(0.1)
+    cards = []
+    for name in tqdm(candidates.card_name.tolist()[:5]):
+        # print(f"\n{name}:\n")
+        card = to_card_properties(scry.cards.Named(exact=name))
+        # for prop in filter(is_public_prop, dir(card)):
+        #     try:
+        #         print(f"{prop}: {getattr(card, prop)()}")
+        #     except:
+        #         continue
+        # print(card)
+        cards.append(card)
+        time.sleep(0.1)
 
-    # processed = pd.DataFrame.from_dict(cards)
+    processed = pd.DataFrame.from_dict(cards)
 
-    # processed.to_csv("data/perrie/processed.csv")
+    processed.to_csv("data/perrie/processed.csv")
 
-    # st.dataframe(processed)
-    # markdown = to_html(processed)
+    st.dataframe(processed)
+    markdown = to_html(processed)
 
-    with open("assets/0.svg", 'r') as svg_file:
+    with open("assets/2G.svg", 'r') as svg_file:
         svg = svg_file.read()
 
     svg = svg.replace('<svg', '<svg style="height:18; width:18;"')
