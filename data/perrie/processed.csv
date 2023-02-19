@@ -1,4 +1,4 @@
-,id,name,type_line,mana_cost,cmc,power,toughness,text,rarity,commander,lang,url
+,id,name,type_line,mana_cost,cmc,power,toughness,text,rarity,legal,lang,url
 0,a8cca2a2-69e3-4136-936c-7a2774c19351,Crashing Footfalls,Sorcery,,0.0,,,"Suspend 4—{G} (Rather than cast this card from your hand, pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Create two 4/4 green Rhino creature tokens with trample.",rare,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=464109
 1,4b9a5878-985d-47ba-a3dd-fe897777b873,Loyal Guardian,Creature — Rhino,{4}{G},5.0,4,4,"Trample
@@ -10,3 +10,11 @@ Remove eight foreshadow counters from Ominous Seas: Create an 8/8 blue Kraken cr
 Cycling {2} ({2}, Discard this card: Draw a card.)",uncommon,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=479581
 4,392b4acf-4548-47dd-be58-bdf4ca4ece7e,War Dance,Enchantment,{G},1.0,,,"At the beginning of your upkeep, you may put a verse counter on War Dance.
 Sacrifice War Dance: Target creature gets +X/+X until end of turn, where X is the number of verse counters on War Dance.",uncommon,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=5689
+5,7e010b11-8f3e-4792-afe4-0a376650b6c4,Revelation of Power,Instant,{1}{W},2.0,,,"Target creature gets +2/+2 until end of turn. If it has a counter on it, it also gains flying and lifelink until end of turn.",common,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=555229
+6,b84be3ef-a820-41e3-b66a-09303dad32dd,Serra's Liturgy,Enchantment,{2}{W}{W},4.0,,,"At the beginning of your upkeep, you may put a verse counter on Serra's Liturgy.
+{W}, Sacrifice Serra's Liturgy: Destroy up to X target artifacts and/or enchantments, where X is the number of verse counters on Serra's Liturgy.",rare,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=8444
+7,5fab4f0d-006d-4a94-80ba-924f19b42f63,Storm of Forms,Instant,{3}{U},4.0,,,"When you cast this spell, copy it for each kind of counter among permanents you control. You may choose new targets for the copies.
+Return target nonland permanent to its owner's hand.",rare,True,en,
+8,3dc24dd4-d259-4687-8247-f56aa7abb5b9,Spontaneous Flight,Instant,{2}{W},3.0,,,Target creature gets +2/+2 until end of turn. Put a flying counter on it.,common,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=479553
+9,1b06b670-7238-4732-85fd-ac6abebea57f,Transmogrifying Wand,Artifact,{3},3.0,,,"Transmogrifying Wand enters the battlefield with three charge counters on it.
+{1}, {T}, Remove a charge counter from Transmogrifying Wand: Destroy target creature. Its controller creates a 2/4 white Ox creature token. Activate only as a sorcery.",rare,True,en,https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=447384

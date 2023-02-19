@@ -57,14 +57,16 @@ for item in div.ul.find_all('li'):
     etree.cleanup_namespaces(xml)
 
     xml = strip_useless_elems_and_attrs(xml)
-    xml.attrib['viewBox'] = "0 0 600 600"
 
-    xml = etree.tostring(xml).decode()
-    xml = re.sub(r"\sxmlns:[^\s]+", "", xml)
+    svg = etree.tostring(xml).decode()
+    svg = re.sub(r"\sxmlns:[^\s]+", "", svg)
 
     if name == '2B.svg':
-        xml = xml.replace('#cccccc', '#cbc2bf')
+        svg = svg.replace('#cccccc', '#cbc2bf')
+
+    svg = re.sub(
+        r"<svg[^>]+>", '<svg width="14" height="14" viewBox="0 0 600 600">', svg)
 
     filepath = f"assets/{name}"
     with open(filepath, 'w') as svg_file:
-        svg_file.write(xml)
+        svg_file.write(svg)
