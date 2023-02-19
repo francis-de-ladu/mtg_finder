@@ -47,8 +47,6 @@ def strip_useless_elems_and_attrs(tree):
 
 for item in div.ul.find_all('li'):
     name = item.div.find('div', {'class': 'gallerytext'}).a.text
-    # if name != '2B.svg':
-    #     continue
     url = item.div.find('div', {'class': 'thumb'}).div.a.get('href')
     svg = requests.get(url).content
 
@@ -63,6 +61,9 @@ for item in div.ul.find_all('li'):
 
     xml = etree.tostring(xml).decode()
     xml = re.sub(r"\sxmlns:[^\s]+", "", xml)
+
+    if name == '2B.svg':
+        xml = xml.replace('#cccccc', '#cbc2bf')
 
     filepath = f"assets/{name}"
     with open(filepath, 'w') as svg_file:
