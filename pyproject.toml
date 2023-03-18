@@ -17,6 +17,7 @@ scrython = "^1.11.0"
 streamlit = "^1.19.0"
 streamlit-searchbox = "^0.0.4"
 stqdm = "^0.0.5"
+watchdog = "^2.3.1"
 
 
 [tool.poetry.group.dev.dependencies]

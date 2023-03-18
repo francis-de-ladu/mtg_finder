@@ -162,3 +162,5 @@ cython_debug/
 
 # Custom files and directories
 assets/
+.mtg.db
+.DS_Store

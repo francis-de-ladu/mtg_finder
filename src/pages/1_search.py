@@ -6,7 +6,7 @@ import scrython as scry
 import streamlit as st
 from streamlit_searchbox import st_searchbox
 
-from utils import display
+from utils import display, Database
 
 results = None
 text_input = None
@@ -17,7 +17,7 @@ st.set_page_config(layout="wide")
 
 def get_autocomplete(text: str):
     candidates = scry.cards.Autocomplete(q=text).data()
-    print(f"{candidates=}")
+    # print(f"{candidates=}")
     return candidates
 
 
@@ -28,8 +28,8 @@ def get_search_results():
     uniques = []
     for card in cards:
         if card['set'] not in sets:
-            pass
-        # print(c['set'])
+            uniques.append(card)
+            sets.add(card['set'])
     return pd.DataFrame.from_dict(map(to_card_properties, uniques))
 
 
@@ -67,7 +67,6 @@ st.subheader("Card Search")
 text_input = st_searchbox(get_autocomplete, key="card_search")
 
 if text_input:
-    print(text_input)
     results = get_search_results()
 
 st.subheader("Results")
